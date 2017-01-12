@@ -89,3 +89,6 @@ $(call inherit-product-if-exists, vendor/nitrogen/products/ota.mk)
 
 # Boot animations
 $(call inherit-product-if-exists, vendor/nitrogen/products/bootanimation.mk) 
+
+# Pull in Prebuilt applications for Pixel devices
+$(call inherit-product-if-exists, vendor/prebuilt/prebuilt.mk)
