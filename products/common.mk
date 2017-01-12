@@ -59,23 +59,16 @@ PRODUCT_PACKAGES += \
     masquerade \
     NitrogenWallpapers \
     Stk \
-    Superuser \
     Terminal
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full
 
-# Superuser
-PRODUCT_COPY_FILES += \
-    vendor/nitrogen/prebuilt/common/superuser/su:root/sbin/su \
-    vendor/nitrogen/prebuilt/common/superuser/init.superuser.rc:root/init.superuser.rc
-
 # Init.d script support
 PRODUCT_COPY_FILES += \
     vendor/nitrogen/prebuilt/common/bin/sysinit:system/bin/sysinit \
-    vendor/nitrogen/prebuilt/common/init.d/00banner:system/etc/init.d/00banner \
-    vendor/nitrogen/prebuilt/common/init.d/init.d.rc:root/init.d.rc
+    vendor/nitrogen/prebuilt/common/etc/init.d.rc:root/init.d.rc
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
