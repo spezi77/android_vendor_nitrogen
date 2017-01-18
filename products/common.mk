@@ -59,7 +59,6 @@ PRODUCT_PACKAGES += \
     masquerade \
     NitrogenWallpapers \
     Stk \
-    Superuser \
     Terminal
 
 # Include explicitly to work around GMS issues
@@ -67,9 +66,14 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full
 
 # Superuser
+ifneq ($(filter nitrogen_geehrc nitrogen_geeb nitrogen_mako nitrogen_hammerhead nitrogen_bullhead,$(TARGET_PRODUCT)),)
+PRODUCT_PACKAGES += \
+    Superuser
+
 PRODUCT_COPY_FILES += \
     vendor/nitrogen/prebuilt/common/superuser/su:root/sbin/su \
     vendor/nitrogen/prebuilt/common/superuser/init.superuser.rc:root/init.superuser.rc
+endif
 
 # Init.d script support
 PRODUCT_COPY_FILES += \
