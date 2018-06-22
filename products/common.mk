@@ -109,3 +109,6 @@ $(call inherit-product-if-exists, vendor/nitrogen/products/bootanimation.mk)
 
 # Themes
 $(call inherit-product-if-exists, vendor/nitrogen/products/themes.mk)
+
+# Use the default language for output
+export LC_ALL=C
