@@ -112,3 +112,6 @@ $(call inherit-product-if-exists, vendor/nitrogen/products/themes.mk)
 
 # Use the default language for output
 export LC_ALL=C
+
+# Google Apps
+$(call inherit-product, vendor/googleapps/googleapps.mk)
